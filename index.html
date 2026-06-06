@@ -6,9 +6,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6860435047781957"
      crossorigin="anonymous"></script>
   
-<!-- Histats.com  START  (aync)-->
 
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5031242,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5031242&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
+
 
  <script type="text/javascript" language="javascript"> $(function () { $(this).bind("contextmenu", function (e) { e.preventDefault(); }); }); </script>
    <script>
@@ -771,6 +782,30 @@ Please review our updated <a href="#https://www.healthmedia.com/terms-of-service
     }    
   
 </style>
+
+
+<script>
+(function() {
+  const KEY = 'popup_last_shown';
+  const LIMIT = 48 * 60 * 60 * 1000; // 24 jam
+  const now = Date.now();
+  let lastShown = null;
+
+  try {
+    lastShown = localStorage.getItem(KEY);
+  } catch(e) {}
+
+  if (lastShown && (now - parseInt(lastShown)) < LIMIT) {
+    // Belum 24 jam → sembunyikan popup sebelum render
+    document.write('<style>#mtc-animeindoid{display:none!important}</style>');
+  } else {
+    // Pertama kali atau sudah lewat 24 jam → catat waktu sekarang
+    try {
+      localStorage.setItem(KEY, now.toString());
+    } catch(e) {}
+  }
+})();
+</script>	
 
 <div id='mtc-animeindoid'>
 <div class='mtc-style-animeindoid' id='mtc-style-animeindoid'>
