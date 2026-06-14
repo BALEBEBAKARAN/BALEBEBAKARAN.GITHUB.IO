@@ -169,15 +169,19 @@ window.onunload=function(){null};
 </head>
   <body>
     
+<!-- Script dijalankan lebih dulu -->
+<script>
+  window.dialogTime = Math.floor(Math.random() * 9) + 7;
+</script>
+
 <!-- DIALOG SPLASH -->
 <div id="dialog-splash">
   <div id="dialog-box">
     <h2>Welcome to Our Website</h2>
     <p>Please wait while we verify that you are not a bot.</p>
-    <div id="dialog-timer">Closing in 10 seconds</div>
+    <div id="dialog-timer"></div>
   </div>
-</div>    
-    
+</div>
     
 					<script type="text/javascript">var Mntl = window.Mntl || {};</script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-4.0.0-beta.js"></script>
@@ -862,9 +866,13 @@ div#btm_banner {
   
   
 <script>
-  let dialogTime = 10;
   const dialogSplash = document.getElementById("dialog-splash");
   const dialogTimer = document.getElementById("dialog-timer");
+
+  let dialogTime = window.dialogTime;
+
+  // Tampilkan angka random begitu elemen sudah ada
+  dialogTimer.textContent = `Closing in ${dialogTime} seconds`;
 
   const dialogInterval = setInterval(() => {
     dialogTime--;
@@ -880,6 +888,6 @@ div#btm_banner {
       }, 500);
     }
   }, 1000);
-</script>  
+</script>
   
 </body></html>
